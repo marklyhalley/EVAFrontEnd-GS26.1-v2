@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agente IA — E.V.A.</title>
+  <meta name="description" content="IA Sentinel - Agente Biointeligente do sistema E.V.A." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/reset.css" />
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container-main">
+      <div class="header-inner">
+        <a href="../index.html" class="logo-link" aria-label="E.V.A. - Página inicial">
+          <div class="logo-icon-box">
+            <i data-lucide="sprout" class="logo-icon" aria-hidden="true"></i>
+          </div>
+          <div>
+            <span class="logo-title">E.V.A.</span>
+            <span class="logo-subtitle">Ecosystem Vitality Assistant</span>
+          </div>
+        </a>
+        <nav class="main-nav" aria-label="Navegação principal">
+          <a href="../index.html"     class="nav-link">Home</a>
+          <a href="dashboard.html" class="nav-link">Dashboard</a>
+          <a href="agente.html"    class="nav-link">Agente IA</a>
+          <a href="fases.html"     class="nav-link">Fases</a>
+          <a href="sobre.html"     class="nav-link">Sobre</a>
+        </nav>
+        <button class="hamburger" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+      </div>
+      <nav class="mobile-menu" aria-label="Navegação mobile">
+        <a href="../index.html"     class="nav-link">Home</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="agente.html"    class="nav-link">Agente IA</a>
+        <a href="fases.html"     class="nav-link">Fases</a>
+        <a href="sobre.html"     class="nav-link">Sobre</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container-main space-y-8">
+
+      <div class="section-header">
+        <h1 class="section-title">
+          <span class="text-secondary">IA Sentinel</span> - Agente Biointeligente
+        </h1>
+        <p class="section-subtitle">
+          Sistema de análise preditiva baseado em sinais bioelétricos e dados IoT
+        </p>
+      </div>
+
+      <section class="ai-stats" aria-labelledby="ai-status-heading">
+        <h2 id="ai-status-heading" class="visually-hidden">Status do sistema de IA</h2>
+
+        <article class="stat-card gradient-card-secondary" style="border-color:var(--secondary-border);">
+          <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
+            <div class="icon-box icon-box-sm icon-box-secondary" style="border-radius:0.5rem;">
+              <i data-lucide="brain" aria-hidden="true" style="width:1.25rem;height:1.25rem;stroke:var(--secondary);"></i>
+            </div>
+            <div>
+              <h3 style="font-size:1.125rem;font-weight:700;color:#fff;">Status da IA</h3>
+              <p style="font-size:0.75rem;color:var(--primary);">● Online</p>
+            </div>
+          </div>
+          <p style="color:rgba(225,245,238,0.7);font-size:0.875rem;line-height:1.6;">
+            Sistema neural ativo monitorando 24 sensores em tempo real
+          </p>
+        </article>
+
+        <article class="stat-card gradient-card-primary" style="border-color:var(--primary-border);">
+          <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
+            <div class="icon-box icon-box-sm icon-box-primary" style="border-radius:0.5rem;">
+              <i data-lucide="activity" aria-hidden="true" style="width:1.25rem;height:1.25rem;stroke:var(--primary);"></i>
+            </div>
+            <div>
+              <h3 style="font-size:1.125rem;font-weight:700;color:#fff;">Análises/hora</h3>
+              <p style="font-size:0.75rem;color:var(--foreground-muted);">Última hora</p>
+            </div>
+          </div>
+          <p class="stat-value text-primary">1,247</p>
+        </article>
+
+        <article class="stat-card" style="border-color:var(--gold-border);background:linear-gradient(135deg,rgba(250,199,117,0.1) 0%,transparent 100%);">
+          <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
+            <div class="icon-box icon-box-sm icon-box-gold" style="border-radius:0.5rem;">
+              <i data-lucide="check-circle" aria-hidden="true" style="width:1.25rem;height:1.25rem;stroke:var(--gold);"></i>
+            </div>
+            <div>
+              <h3 style="font-size:1.125rem;font-weight:700;color:#fff;">Precisão</h3>
+              <p style="font-size:0.75rem;color:var(--foreground-muted);">Diagnósticos</p>
+            </div>
+          </div>
+          <p class="stat-value text-gold">98.4%</p>
+        </article>
+
+      </section>
+
+      <section class="terminal" aria-labelledby="terminal-heading">
+        <div class="terminal-header">
+          <i data-lucide="terminal" aria-hidden="true" style="width:1.25rem;height:1.25rem;stroke:var(--secondary);flex-shrink:0;"></i>
+          <h2 id="terminal-heading" style="font-size:1.125rem;font-weight:700;color:#fff;">
+            Terminal de Logs da IA
+          </h2>
+          <span style="margin-left:auto;font-size:0.75rem;color:var(--foreground-muted);font-family:var(--font-mono);" role="status" aria-live="polite">LIVE</span>
+        </div>
+
+        <div id="terminal-body" class="terminal-body" role="log" aria-label="Logs em tempo real do sistema IA" aria-live="polite">
+          </div>
+      </section>
+
+      <section class="diagnostic-card" aria-labelledby="diag-heading">
+        <h2 id="diag-heading" style="font-size:1.25rem;font-weight:700;color:#fff;margin-bottom:1.5rem;">
+          Diagnóstico Preditivo Atual
+        </h2>
+
+        <div class="diagnostic-grid">
+
+          <div>
+            <h3 style="font-size:0.875rem;color:var(--foreground-muted);margin-bottom:0.75rem;">
+              Análise do Ecossistema
+            </h3>
+
+            <div class="progress-row">
+              <div class="progress-label">
+                <span style="color:var(--foreground);">Saúde da Rede Fúngica</span>
+                <span class="font-mono font-bold text-primary">87%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-bar" style="width:87%;background-color:var(--primary);"></div>
+              </div>
+            </div>
+
+            <div class="progress-row">
+              <div class="progress-label">
+                <span style="color:var(--foreground);">Capacidade de Desintoxicação</span>
+                <span class="font-mono font-bold text-secondary">73%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-bar" style="width:73%;background-color:var(--secondary);"></div>
+              </div>
+            </div>
+
+            <div class="progress-row">
+              <div class="progress-label">
+                <span style="color:var(--foreground);">Proteção contra Radiação</span>
+                <span class="font-mono font-bold text-gold">65%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-bar" style="width:65%;background-color:var(--gold);"></div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 style="font-size:0.875rem;color:var(--foreground-muted);margin-bottom:0.75rem;">
+              Recomendações da IA
+            </h3>
+
+            <div class="recommendation" style="background-color:rgba(29,158,117,0.1);border-color:var(--primary-border);">
+              <i data-lucide="check-circle" aria-hidden="true" style="width:1.25rem;height:1.25rem;stroke:var(--primary);flex-shrink:0;margin-top:2px;"></i>
+              <div>
+                <p class="recommendation-title">Aumentar umidade no setor C</p>
+                <p class="recommendation-sub">Detectado stress hídrico em 3 nós</p>
+              </div>
+            </div>
+
+            <div class="recommendation" style="background-color:rgba(83,58,183,0.1);border-color:var(--secondary-border);">
+              <i data-lucide="check-circle" aria-hidden="true" style="width:1.25rem;height:1.25rem;stroke:var(--secondary);flex-shrink:0;margin-top:2px;"></i>
+              <div>
+                <p class="recommendation-title">Continuar Fase 2 por 48h</p>
+                <p class="recommendation-sub">Estruturação do solo em progresso ideal</p>
+              </div>
+            </div>
+
+            <div class="recommendation" style="background-color:rgba(250,199,117,0.1);border-color:var(--gold-border);">
+              <i data-lucide="alert-circle" aria-hidden="true" style="width:1.25rem;height:1.25rem;stroke:var(--gold);flex-shrink:0;margin-top:2px;"></i>
+              <div>
+                <p class="recommendation-title">Monitorar radiação UV</p>
+                <p class="recommendation-sub">Pico solar previsto em 6 horas</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container-main">
+      <p>E.V.A. © 2026 — Sistema Biointeligente para Regeneração de Ecossistemas</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/agente.js"></script>
+</body>
+</html>
