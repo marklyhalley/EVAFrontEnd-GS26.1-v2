@@ -197,9 +197,9 @@ function renderDetail() {
   container.style.borderColor = fase.borderColor;
 
   const detalhesHTML = fase.detalhes.map(d => `
-    <div style="display:flex;align-items:flex-start;gap:0.75rem;">
-      <div style="width:0.375rem;height:0.375rem;border-radius:50%;background-color:${fase.color};flex-shrink:0;margin-top:0.5rem;"></div>
-      <p style="font-size:0.875rem;color:rgba(225,245,238,0.7);">${d}</p>
+    <div class="fase-detalhe-item">
+      <div class="fase-detalhe-dot" style="background-color:${fase.color};"></div>
+      <p class="fase-detalhe-text">${d}</p>
     </div>
   `).join('');
 
@@ -208,11 +208,11 @@ function renderDetail() {
   container.innerHTML = `
     <div class="fase-detail-header">
       <div class="fase-detail-title-group">
-        <div style="width:4rem;height:4rem;border-radius:0.75rem;background-color:${fase.color}20;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+        <div class="fase-icon-box" style="background-color:${fase.color}20;">
           <i data-lucide="${fase.icon}" style="width:2rem;height:2rem;stroke:${fase.color};"></i>
         </div>
         <div>
-          <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.25rem;">
+          <div class="fase-title-inner">
             <span class="fase-number" style="color:${fase.color};">${fase.numero}</span>
             <div>
               <h3 class="fase-detail-title">${fase.titulo}</h3>
@@ -221,30 +221,30 @@ function renderDetail() {
           </div>
         </div>
       </div>
-      <span class="chip" style="background-color:${fase.color}20;color:${fase.statusTextColor};">${fase.status}</span>
+      <span class="chip fase-status-chip" style="background-color:${fase.color}20;color:${fase.statusTextColor};">${fase.status}</span>
     </div>
 
-    <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1.5rem;">
+    <div class="fase-progress-row">
       <div class="progress-track" style="flex:1;">
         <div class="progress-bar" style="width:${fase.progresso}%;background-color:${fase.color};${fase.progresso > 0 ? 'box-shadow:0 0 8px '+fase.color+'60;' : ''}"></div>
       </div>
-      <span class="font-mono font-bold" style="color:${fase.color};min-width:2.5rem;text-align:right;">${fase.progresso}%</span>
+      <span class="font-mono font-bold fase-progress-pct" style="color:${fase.color};">${fase.progresso}%</span>
     </div>
 
-    <div style="display:flex;flex-direction:column;gap:1.5rem;">
+    <div class="fase-body">
       <div>
-        <h4 style="font-size:1.125rem;font-weight:700;color:#fff;margin-bottom:0.75rem;">Visão Geral</h4>
-        <p style="color:rgba(225,245,238,0.8);">${fase.descricao}</p>
+        <h4 class="fase-section-title">Visão Geral</h4>
+        <p class="fase-text">${fase.descricao}</p>
       </div>
 
       <div>
-        <h4 style="font-size:1.125rem;font-weight:700;color:#fff;margin-bottom:0.75rem;">Descrição Completa</h4>
-        <div style="color:rgba(225,245,238,0.8);line-height:1.7;display:flex;flex-direction:column;gap:1rem;">${conteudoHTML}</div>
+        <h4 class="fase-section-title">Descrição Completa</h4>
+        <div class="fase-conteudo">${conteudoHTML}</div>
       </div>
 
       <div>
-        <h4 style="font-size:1.125rem;font-weight:700;color:#fff;margin-bottom:0.75rem;">Características Principais</h4>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;">${detalhesHTML}</div>
+        <h4 class="fase-section-title">Características Principais</h4>
+        <div class="fase-car-grid">${detalhesHTML}</div>
       </div>
     </div>
   `;
