@@ -1205,7 +1205,12 @@ h4 { font-size: 1rem; font-weight: 500; line-height: 1.5; }
 
 @media (max-width: 768px) {
   .header-inner {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+  }
+
+  .logo-link {
+    min-width: 0;
+    overflow: hidden;
   }
 
   .hero-title {
@@ -1310,6 +1315,10 @@ h4 { font-size: 1rem; font-weight: 500; line-height: 1.5; }
 }
 
 @media (max-width: 575px) {
+  .logo-subtitle {
+    display: none;
+  }
+
   .mobile-menu.open {
     grid-template-columns: 1fr;
   }
@@ -1357,4 +1366,216 @@ h4 { font-size: 1rem; font-weight: 500; line-height: 1.5; }
     width: 1.5rem !important;
     height: 1.5rem !important;
   }
+}
+
+/* ================================================================
+   UPDATES — Fase 0, Images, Chat, Dragon Capsule
+   ================================================================ */
+
+/* --- Fase hero image inside detail panel --- */
+.fase-hero-img {
+  width: 100%; height: 230px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+.fase-hero-img img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+  transition: transform 0.5s ease;
+}
+.fase-hero-img::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0; height: 45%;
+  background: linear-gradient(to bottom, transparent, rgba(10,15,28,0.55));
+  pointer-events: none;
+}
+
+/* --- IoT Info Block (Fase 0 only) --- */
+.iot-info-block {
+  background: rgba(184,125,42,0.06);
+  border: 1px solid rgba(250,199,117,0.2);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.5rem;
+  margin-top: 1.5rem;
+}
+.iot-info-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: #FAC775;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+.iot-info-row {
+  display: flex; gap: 0.5rem;
+  font-size: 0.8rem; margin-bottom: 0.3rem;
+}
+.iot-info-key { color: var(--foreground-muted); min-width: 130px; flex-shrink: 0; }
+.iot-info-val { color: #FAC775; font-family: var(--font-mono); overflow-wrap: break-word; word-break: break-word; }
+.iot-info-note {
+  font-size: 0.72rem; color: var(--foreground-muted);
+  margin-top: 0.75rem; padding-top: 0.75rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+@media (max-width: 480px) {
+  .iot-info-block {
+    padding: 1rem 0.875rem;
+  }
+  .iot-info-label {
+    font-size: 0.62rem;
+    white-space: normal;
+    word-break: break-word;
+  }
+  .iot-info-row {
+    flex-direction: column;
+    gap: 0.1rem;
+    margin-bottom: 0.5rem;
+  }
+  .iot-info-key {
+    min-width: unset;
+    font-size: 0.7rem;
+  }
+  .iot-info-val {
+    font-size: 0.75rem;
+    padding-left: 0.5rem;
+  }
+  .iot-info-note {
+    font-size: 0.68rem;
+  }
+}
+
+/* --- Dragon Capsule card (Dashboard) --- */
+.dragon-card {
+  background: linear-gradient(135deg, rgba(184,125,42,0.06) 0%, rgba(15,20,34,0.98) 100%);
+  border: 1px solid rgba(250,199,117,0.2);
+  border-radius: var(--radius-xl);
+  padding: 1.75rem;
+}
+.dragon-img {
+  width: 100%; border-radius: var(--radius-lg);
+  aspect-ratio: 16 / 9; object-fit: cover; display: block;
+}
+.iot-param-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem; margin-top: 1rem;
+}
+@media (max-width: 576px) { .iot-param-grid { grid-template-columns: repeat(2, 1fr); } }
+.iot-param-mini {
+  background: var(--background-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.6rem 0.8rem;
+}
+.iot-param-key {
+  font-size: 0.67rem; color: var(--foreground-muted);
+  font-family: var(--font-mono); margin-bottom: 0.15rem;
+}
+.iot-param-val {
+  font-size: 0.84rem; font-weight: 700;
+  color: #FAC775; font-family: var(--font-mono);
+}
+
+/* --- Chat Interface (Agente IA) --- */
+.chat-wrap {
+  background-color: var(--background-card);
+  border: 1px solid rgba(29,158,117,0.3);
+  border-radius: var(--radius-xl);
+  display: flex; flex-direction: column; overflow: hidden;
+}
+.chat-head {
+  display: flex; align-items: center; gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+.chat-messages {
+  flex: 1; overflow-y: auto;
+  padding: 1rem 1.25rem;
+  display: flex; flex-direction: column; gap: 0.75rem;
+  min-height: 280px; max-height: 330px;
+}
+.chat-msg { display: flex; }
+.chat-msg-user { justify-content: flex-end; }
+.chat-msg-eva  { justify-content: flex-start; }
+.chat-bubble {
+  max-width: 84%;
+  padding: 0.7rem 1rem;
+  border-radius: var(--radius-lg);
+  font-size: 0.81rem; line-height: 1.65;
+  white-space: pre-line;
+}
+.chat-bubble-user {
+  background: rgba(83,58,183,0.25);
+  border: 1px solid rgba(83,58,183,0.4);
+  color: #fff;
+}
+.chat-bubble-eva {
+  background: rgba(29,158,117,0.1);
+  border: 1px solid rgba(29,158,117,0.25);
+  color: var(--foreground);
+}
+.chat-meta {
+  font-size: 0.64rem; font-family: var(--font-mono);
+  color: var(--foreground-muted); margin-bottom: 0.25rem;
+}
+.chat-input-row {
+  display: flex; gap: 0.5rem;
+  padding: 0.85rem 1.25rem;
+  border-top: 1px solid var(--border);
+}
+.chat-input {
+  flex: 1;
+  background: rgba(10,15,28,0.85);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.55rem 1rem;
+  font-size: 0.81rem; color: #fff;
+  font-family: var(--font-main);
+  outline: none; transition: border-color 0.2s;
+}
+.chat-input:focus { border-color: rgba(29,158,117,0.5); }
+.chat-input::placeholder { color: var(--foreground-muted); }
+.chat-input:disabled { opacity: 0.5; }
+.chat-send {
+  width: 2.2rem; height: 2.2rem; flex-shrink: 0;
+  border-radius: var(--radius);
+  background: rgba(29,158,117,0.15);
+  border: 1px solid rgba(29,158,117,0.3);
+  color: var(--primary);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: var(--transition);
+}
+.chat-send:hover:not(:disabled) { background: rgba(29,158,117,0.28); }
+.chat-send:disabled { opacity: 0.3; cursor: not-allowed; }
+.typing-bubble {
+  background: rgba(29,158,117,0.1);
+  border: 1px solid rgba(29,158,117,0.25);
+  border-radius: var(--radius-lg);
+  padding: 0.6rem 1rem;
+}
+.typing-dots { display: flex; gap: 0.25rem; align-items: center; }
+.typing-dot {
+  width: 0.35rem; height: 0.35rem;
+  background: var(--primary); border-radius: 50%;
+  animation: dot-bounce 1.4s infinite;
+}
+.typing-dot:nth-child(2) { animation-delay: 0.15s; }
+.typing-dot:nth-child(3) { animation-delay: 0.3s; }
+@keyframes dot-bounce {
+  0%, 60%, 100% { transform: translateY(0); }
+  30%            { transform: translateY(-5px); }
+}
+
+/* --- Team member photo --- */
+.team-photo {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  flex-shrink: 0;
+  display: block;
 }

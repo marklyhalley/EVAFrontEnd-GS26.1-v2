@@ -36,8 +36,8 @@
   --muted:             #3a3a38;
 
   
-  --font-main: 'Syne', 'Segoe UI', system-ui, sans-serif;
-  --font-mono: 'Space Mono', 'Courier New', monospace;
+  --font-main: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, Menlo, Monaco, Consolas, monospace;
 
   
   --radius-sm:  0.375rem;   

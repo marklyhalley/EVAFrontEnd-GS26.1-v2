@@ -5,16 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Agente IA — E.V.A.</title>
   <meta name="description" content="IA Sentinel - Agente Biointeligente do sistema E.V.A." />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 
   <link rel="stylesheet" href="../css/reset.css" />
   <link rel="stylesheet" href="../css/variables.css" />
   <link rel="stylesheet" href="../css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
@@ -107,17 +105,60 @@
 
       </section>
 
-      <section class="terminal" aria-labelledby="terminal-heading">
-        <div class="terminal-header">
-          <i data-lucide="terminal" aria-hidden="true" style="width:1.25rem;height:1.25rem;stroke:var(--secondary);flex-shrink:0;"></i>
-          <h2 id="terminal-heading" style="font-size:1.125rem;font-weight:700;color:#fff;">
-            Terminal de Logs da IA
-          </h2>
-          <span style="margin-left:auto;font-size:0.75rem;color:var(--foreground-muted);font-family:var(--font-mono);" role="status" aria-live="polite">LIVE</span>
-        </div>
+      <!-- Terminal + Chat — lado a lado -->
+      <section aria-labelledby="terminal-heading">
+        <div class="row g-4">
 
-        <div id="terminal-body" class="terminal-body" role="log" aria-label="Logs em tempo real do sistema IA" aria-live="polite">
+          <!-- Terminal de logs (esquerda) -->
+          <div class="col-12 col-md-5">
+            <div class="terminal" style="height:100%;">
+              <div class="terminal-header">
+                <i data-lucide="terminal" aria-hidden="true" style="width:1.25rem;height:1.25rem;stroke:var(--secondary);flex-shrink:0;"></i>
+                <h2 id="terminal-heading" style="font-size:1.125rem;font-weight:700;color:#fff;">
+                  Logs do Sistema
+                </h2>
+                <span style="margin-left:auto;font-size:0.75rem;color:var(--primary);font-family:var(--font-mono);display:flex;align-items:center;gap:0.35rem;" role="status" aria-live="polite">
+                  <span style="width:0.45rem;height:0.45rem;border-radius:50%;background:var(--primary);animation:pulse-anim 2s infinite;display:inline-block;"></span>
+                  LIVE
+                </span>
+              </div>
+              <div id="terminal-body" class="terminal-body" role="log"
+                   aria-label="Logs em tempo real do sistema" aria-live="polite">
+              </div>
+            </div>
           </div>
+
+          <!-- Chat E.V.A. (direita) -->
+          <div class="col-12 col-md-7">
+            <div class="chat-wrap" style="height:100%;">
+              <div class="chat-head">
+                <i data-lucide="cpu" aria-hidden="true" style="width:1.1rem;height:1.1rem;stroke:var(--primary);flex-shrink:0;"></i>
+                <span style="font-size:1rem;font-weight:700;color:#fff;">Consultar E.V.A.</span>
+                <span style="margin-left:auto;font-size:0.7rem;color:var(--foreground-muted);font-family:var(--font-mono);">
+                  Análise por regras biossistêmicas
+                </span>
+              </div>
+
+              <div id="chat-messages" class="chat-messages" role="log"
+                   aria-label="Conversa com o agente E.V.A." aria-live="polite">
+              </div>
+
+              <div class="chat-input-row">
+                <input
+                  id="chat-input"
+                  class="chat-input"
+                  type="text"
+                  placeholder='Ex: qual o status da fase 2? / há algum alerta?'
+                  aria-label="Mensagem para o agente E.V.A."
+                />
+                <button id="chat-send" class="chat-send" aria-label="Enviar mensagem">
+                  <i data-lucide="send" aria-hidden="true" style="width:1rem;height:1rem;stroke:currentColor;"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </section>
 
       <section class="diagnostic-card" aria-labelledby="diag-heading">
