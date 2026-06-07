@@ -1,0 +1,317 @@
+/* ================================================================
+   MEDIA.CSS — E.V.A. Global Solution
+   Responsividade: todos os breakpoints centralizados
+   Ordem: maior → menor breakpoint
+   ================================================================ */
+
+/* ── 992px ─────────────────────────────────────────────────────── */
+@media (max-width: 992px) {
+  .metrics-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .diagnostic-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline {
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  .timeline-node {
+    padding: 0.75rem 0;
+  }
+
+  .timeline-line {
+    width: 2px;
+    height: 2rem;
+    flex: none;
+    background: linear-gradient(to bottom, #993C1D, #1D9E75) !important;
+  }
+
+  .timeline-line-2 {
+    background: linear-gradient(to bottom, #1D9E75, #1D9E75) !important;
+  }
+
+  .timeline-line-3 {
+    background: linear-gradient(to bottom, #1D9E75, #533AB7) !important;
+  }
+}
+
+/* ── 991px ─────────────────────────────────────────────────────── */
+@media (max-width: 991px) {
+  .main-nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobile-menu.open {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.25rem;
+    padding: 1rem 1.5rem 1.25rem;
+  }
+
+  .mobile-menu .nav-link {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* ── 768px ─────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-wrap: nowrap;
+  }
+
+  .logo-link {
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mission-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .timer-group {
+    gap: 1rem;
+  }
+
+  .timer-value {
+    font-size: 2rem;
+  }
+
+  .ai-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .fase-detail-header {
+    flex-direction: column;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .dome-cta-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .fases-tabs-wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow-x: unset;
+    padding-bottom: 0;
+  }
+
+  .fase-tab-btn {
+    width: 100%;
+    padding: 0.75rem;
+  }
+
+  .fase-tab-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.375rem;
+  }
+
+  .fase-tab-inner .icon-box-md {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  .fase-tab-inner .icon-box-md svg {
+    width: 1rem !important;
+    height: 1rem !important;
+  }
+
+  .fase-mini-progress {
+    display: none;
+  }
+
+  .fase-tab-text .phase-num {
+    font-size: 0.625rem;
+  }
+
+  .fase-tab-text .phase-title {
+    font-size: 0.8125rem;
+  }
+
+  .fase-detail-title-group {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    min-width: 0;
+  }
+
+  .fase-detail-title-group > div:last-child {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .fase-number {
+    font-size: 1.75rem;
+  }
+
+  .fase-detail-title {
+    font-size: 1.125rem;
+  }
+}
+
+/* ── 576px ─────────────────────────────────────────────────────── */
+@media (max-width: 576px) {
+  .iot-param-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ── 575px ─────────────────────────────────────────────────────── */
+@media (max-width: 575px) {
+  .logo-subtitle {
+    display: none;
+  }
+
+  .mobile-menu.open {
+    grid-template-columns: 1fr;
+  }
+
+  .mobile-menu .nav-link {
+    padding: 0.875rem 1rem;
+    font-size: 1rem;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-buttons .btn {
+    justify-content: center;
+  }
+
+  .timer-group {
+    gap: 0.75rem;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+
+  .fase-detail {
+    padding: 1rem;
+  }
+
+  .fase-car-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fase-icon-box {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .fase-icon-box svg {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+  }
+}
+
+/* ── 480px ─────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  /* Fase rows */
+  .fase-row-header {
+    flex-wrap: wrap;
+  }
+
+  .fase-row-header .chip {
+    align-self: flex-start;
+    margin-left: calc(1.5rem + 0.75rem + 0.75rem);
+  }
+
+  .fase-tab-btn {
+    padding: 0.625rem 0.5rem;
+  }
+
+  .fase-tab-text .phase-title {
+    font-size: 0.75rem;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .fase-number {
+    font-size: 1.25rem;
+  }
+
+  .fase-detail-title {
+    font-size: 1rem;
+  }
+
+  .fase-detail-subtitle {
+    font-size: 0.75rem;
+  }
+
+  .fase-detail {
+    padding: 1.25rem;
+  }
+
+  /* IoT info block (Fase 0) */
+  .iot-info-block {
+    padding: 1rem 0.875rem;
+  }
+
+  .iot-info-label {
+    font-size: 0.62rem;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .iot-info-row {
+    flex-direction: column;
+    gap: 0.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .iot-info-key {
+    min-width: unset;
+    font-size: 0.7rem;
+  }
+
+  .iot-info-val {
+    font-size: 0.75rem;
+    padding-left: 0.5rem;
+  }
+
+  .iot-info-note {
+    font-size: 0.68rem;
+  }
+}
