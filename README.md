@@ -1,72 +1,76 @@
-# E.V.A. — Ecosystem Vitality Assistant
-
-**Sistema Biointeligente para Regeneração de Ecossistemas**
-
-## Equipe
-
-| Nome | RM |
-|------|----|
-| Gustavo Almeida Ferreira | RM 566980 |
-| Lucas de Oliveira Miranda Caetano | RM 568036 |
-| Marco Túlio Longo Conte | RM 568373 |
-| Sofia Souza Rodrigues | RM 566708 |
-| Camile Vitória Silva | RM 566649 |
-
----
+# E.V.A. – Ecosystem Vitality Assistant
 
 ## Sobre o Projeto
 
-O E.V.A. é um sistema biointeligente que combina fungos micorrízicos, sensores IoT e inteligência artificial para regenerar solos degradados na Terra e viabilizar a criação de ecossistemas habitáveis em Marte.
+O E.V.A. (Ecosystem Vitality Assistant) é uma aplicação web desenvolvida para a Global Solution 2026, com foco no monitoramento e apoio à regeneração de ecossistemas por meio da integração entre tecnologia, sustentabilidade e análise de dados.
+
+O sistema apresenta informações sobre o projeto, indicadores ambientais, fases de implementação e uma interface de agente virtual para acompanhamento das operações.
 
 ---
 
-## Estrutura de Pastas
+## Funcionalidades
 
-```
-EVA-GlobalSolution/
-├── index.html          # Página Home
-├── dashboard.html      # Dashboard de monitoramento IoT
-├── agente.html         # Agente IA / Terminal de logs
-├── fases.html          # Roadmap das 4 fases
-├── sobre.html          # Sobre o projeto e a equipe
-├── css/
-│   ├── reset.css       # Reset CSS global
-│   ├── variables.css   # Variáveis CSS (tokens de design)
-│   └── style.css       # Estilos principais
-├── js/
-│   ├── main.js         # Navegação e utilitários compartilhados
-│   ├── home.js         # Animação de estrelas (parallax)
-│   ├── dashboard.js    # Timer de missão e gráficos Chart.js
-│   ├── agente.js       # Terminal de logs em tempo real
-│   └── fases.js        # Navegação entre fases (URL params)
-└── README.md
-```
+* Página inicial com apresentação da solução;
+* Dashboard com visualização de indicadores;
+* Agente virtual para exibição de informações e registros;
+* Página de fases do projeto;
+* Página sobre a equipe e a proposta da solução;
+* Navegação responsiva entre as páginas.
 
 ---
 
 ## Tecnologias Utilizadas
 
-| Tecnologia | Função |
-|------------|--------|
-| HTML5 | Estrutura semântica das páginas |
-| CSS3 | Variáveis, Flexbox, Grid, Animações |
-| JavaScript (ES6+) | Interatividade e lógica dinâmica |
-| Bootstrap 5 | Grid responsivo e utilitários |
-| Google Fonts | Tipografia (Syne + Space Mono) |
-| Lucide Icons | Ícones SVG acessíveis |
-| Chart.js | Gráficos interativos no Dashboard |
+* HTML5
+* CSS3
+* JavaScript
+* Bootstrap
+* Chart.js
 
 ---
 
-## Páginas
+## Estrutura do Projeto
 
-1. **Home** — Apresentação do projeto, pilares e problema
-2. **Dashboard** — Timer de missão, métricas IoT e gráficos em tempo real
-3. **Agente IA** — Terminal de logs ao vivo e diagnóstico preditivo
-4. **Fases** — Roadmap das 4 fases de regeneração com detalhes
-5. **Sobre** — Equipe, ODS, tecnologias e visão de futuro
+```text
+├── index.html
+├── pages/
+│   ├── dashboard.html
+│   ├── agente.html
+│   ├── fases.html
+│   └── sobre.html
+├── css/
+├── js/
+├── images/
+└── README.md
+```
 
 ---
+
+## Como Executar
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/marklyhalley/EVAFrontEnd-GS26.1-v2.git
+```
+
+2. Abra a pasta do projeto.
+
+3. Execute o arquivo `index.html` em um navegador ou utilize a extensão Live Server do VS Code.
+
+---
+
+## Equipe
+
+* Gustavo Almeida Ferreira — RM566980
+* Lucas de Oliveira Miranda Caetano — RM568036
+* Marco Túlio Longo Conte — RM568373
+* Sofia Souza Rodrigues — RM566708
+* Camile Vitória Silva — RM566649
+
+---
+
+
 
 ## Requisitos Atendidos
 
@@ -87,3 +91,11 @@ EVA-GlobalSolution/
 - ✅ Responsividade — Desktop, Tablet e Mobile
 - ✅ Transições, animações e elementos interativos
 - ✅ Bootstrap 5
+
+---
+
+## Projeto Acadêmico
+
+Projeto desenvolvido para a Global Solution 2026 – FIAP.
+
+---
