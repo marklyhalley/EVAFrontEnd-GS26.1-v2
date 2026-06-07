@@ -1,18 +1,11 @@
-/* =============================================
-   FASES.JS — E.V.A. Global Solution
-   Fase 0 (Transporte) + Fases 1-4 com imagens
-   ============================================= */
-
 document.addEventListener('DOMContentLoaded', () => {
   lucide.createIcons();
   initFasesTabs();
 });
 
-/* Normaliza string: remove acentos e minúsculas */
 const norm = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
 const FASES_DATA = [
-  /* ── FASE 00 — Transporte ─────────────────────────────────────── */
   {
     numero: '00',
     titulo: 'Transporte da Carga Biológica',
@@ -48,7 +41,6 @@ const FASES_DATA = [
       Intervalo: '3 segundos',
     },
   },
-  /* ── FASE 01 — Desintoxicação ─────────────────────────────────── */
   {
     numero: '01',
     titulo: 'Desintoxicação',
@@ -77,7 +69,6 @@ const FASES_DATA = [
       'Monitoramento contínuo via sensores IoT',
     ],
   },
-  /* ── FASE 02 — Estruturação ───────────────────────────────────── */
   {
     numero: '02',
     titulo: 'Estruturação do Solo',
@@ -106,7 +97,6 @@ const FASES_DATA = [
       'Base para simbiose com plantas na Fase 3',
     ],
   },
-  /* ── FASE 03 — Nutrição ───────────────────────────────────────── */
   {
     numero: '03',
     titulo: 'Nutrição e Regeneração',
@@ -135,7 +125,6 @@ const FASES_DATA = [
       'Início da produção de matéria orgânica no solo',
     ],
   },
-  /* ── FASE 04 — Proteção ───────────────────────────────────────── */
   {
     numero: '04',
     titulo: 'Proteção e Estabilidade',
@@ -233,23 +222,19 @@ function renderDetail() {
   container.style.background   = `linear-gradient(135deg, ${fase.bgGradient} 0%, transparent 100%)`;
   container.style.borderColor  = fase.borderColor;
 
-  /* Hero image */
   const imgHtml = fase.imagem ? `
     <div class="fase-hero-img">
       <img src="${fase.imagem}" alt="${fase.imagemAlt || ''}" loading="lazy" />
     </div>` : '';
 
-  /* Detalhes bullets */
   const detalhesHTML = fase.detalhes.map(d => `
     <div class="fase-detalhe-item">
       <div class="fase-detalhe-dot" style="background-color:${fase.color};"></div>
       <p class="fase-detalhe-text">${d}</p>
     </div>`).join('');
 
-  /* Conteúdo parágrafos */
   const conteudoHTML = fase.conteudo.map(p => `<p>${p}</p>`).join('');
 
-  /* Bloco IoT (somente Fase 00) */
   const iotHtml = fase.iotInfo ? `
     <div class="iot-info-block">
       <div class="iot-info-label">// Sistema de Telemetria IoT — Edge Computing</div>

@@ -1,22 +1,15 @@
-/* =============================================
-   HOME.JS — E.V.A. Global Solution
-   Animação de estrelas parallax e navegação
-   ============================================= */
-
 document.addEventListener('DOMContentLoaded', () => {
   initStars();
   initParallax();
   lucide.createIcons();
 });
 
-/* ---- Gera as estrelas ---- */
 function initStars() {
   const container = document.getElementById('hero-stars');
   if (!container) return;
 
   const fragment = document.createDocumentFragment();
 
-  // Estrelas brancas
   for (let i = 0; i < 120; i++) {
     const star = document.createElement('div');
     const size = Math.random() * 2.5 + 0.5;
@@ -31,7 +24,6 @@ function initStars() {
     fragment.appendChild(star);
   }
 
-  // Estrelas coloridas (verde + roxo)
   for (let i = 0; i < 8; i++) {
     const star = document.createElement('div');
     const size = Math.random() * 3 + 2;
@@ -53,7 +45,6 @@ function initStars() {
   container.appendChild(fragment);
 }
 
-/* ---- Parallax ao mover o mouse ---- */
 function initParallax() {
   const section = document.querySelector('.hero-section');
   const starsEl = document.getElementById('hero-stars');

@@ -1,8 +1,3 @@
-/* =============================================
-   DASHBOARD.JS — E.V.A. Global Solution
-   Timer de missão e gráficos Chart.js
-   ============================================= */
-
 document.addEventListener('DOMContentLoaded', () => {
   lucide.createIcons();
   initMissionTimer();
@@ -11,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaseRowHovers();
 });
 
-/* ---- Timer de Missão ---- */
 function initMissionTimer() {
   const MISSION_START = new Date('2026-05-25T00:00:00');
 
@@ -50,7 +44,7 @@ function initMissionTimer() {
   }
 
   update();
-  setInterval(update, 30000); // atualiza a cada 30s
+  setInterval(update, 30000);
 }
 
 function getFaseNome(dias) {
@@ -66,7 +60,6 @@ function getFaseColor(dias) {
   return '#533AB7';
 }
 
-/* ---- Dados para os gráficos ---- */
 const metricsData = {
   labels:      ['00:00', '04:00', '08:00', '12:00', '16:00', '20:00'],
   ph:          [6.2, 6.4, 6.6, 6.8, 7.0, 7.1],
@@ -101,7 +94,6 @@ const chartDefaults = {
   },
 };
 
-/* ---- Line Chart: Desintoxicação ---- */
 function initLineChart() {
   const canvas = document.getElementById('lineChart');
   if (!canvas) return;
@@ -144,7 +136,6 @@ function initLineChart() {
   });
 }
 
-/* ---- Bar Chart: Rede Fúngica ---- */
 function initBarChart() {
   const canvas = document.getElementById('barChart');
   if (!canvas) return;
@@ -181,7 +172,6 @@ function initBarChart() {
   });
 }
 
-/* ---- Hover dinâmico nas fases ---- */
 function initFaseRowHovers() {
   document.querySelectorAll('.fase-row[data-color]').forEach(row => {
     const color = row.dataset.color;

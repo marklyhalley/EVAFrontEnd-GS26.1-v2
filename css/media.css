@@ -1,10 +1,3 @@
-/* ================================================================
-   MEDIA.CSS — E.V.A. Global Solution
-   Responsividade: todos os breakpoints centralizados
-   Ordem: maior → menor breakpoint
-   ================================================================ */
-
-/* ── 992px ─────────────────────────────────────────────────────── */
 @media (max-width: 992px) {
   .metrics-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -49,7 +42,6 @@
   }
 }
 
-/* ── 991px ─────────────────────────────────────────────────────── */
 @media (max-width: 991px) {
   .main-nav {
     display: none;
@@ -72,7 +64,6 @@
   }
 }
 
-/* ── 768px ─────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .header-inner {
     flex-wrap: nowrap;
@@ -184,14 +175,12 @@
   }
 }
 
-/* ── 576px ─────────────────────────────────────────────────────── */
 @media (max-width: 576px) {
   .iot-param-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* ── 575px ─────────────────────────────────────────────────────── */
 @media (max-width: 575px) {
   .logo-subtitle {
     display: none;
@@ -246,9 +235,7 @@
   }
 }
 
-/* ── 480px ─────────────────────────────────────────────────────── */
 @media (max-width: 480px) {
-  /* Fase rows */
   .fase-row-header {
     flex-wrap: wrap;
   }
@@ -284,7 +271,6 @@
     padding: 1.25rem;
   }
 
-  /* IoT info block (Fase 0) */
   .iot-info-block {
     padding: 1rem 0.875rem;
   }

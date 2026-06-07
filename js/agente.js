@@ -1,18 +1,11 @@
-/* =============================================
-   AGENTE.JS — E.V.A. Global Solution
-   Chat baseado em regras + Terminal de logs
-   ============================================= */
-
 document.addEventListener('DOMContentLoaded', () => {
   lucide.createIcons();
   initTerminal();
   initChat();
 });
 
-/* ─── Normalização de texto (remove acentos) ─────────────────────── */
 const norm = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
-/* ─── Base de conhecimento (regras por palavras-chave) ────────────── */
 const KNOWLEDGE = [
   { kw:['ola','olá','oi','bom dia','boa tarde','boa noite','hello'],
     res:'Sistema E.V.A. online. Identificando operador... autenticação confirmada.\n\nComo posso auxiliar o monitoramento do ecossistema hoje?' },
@@ -68,7 +61,6 @@ function getEVAResponse(input) {
   return 'Parâmetro não reconhecido nos módulos ativos.\n\nTente: status, fase 0–4, ph, umidade, toxicidade, fungos, alertas, previsão ou relatório.\nOu digite "ajuda" para ver todos os tópicos. 🌿';
 }
 
-/* ─── Chat ────────────────────────────────────────────────────────── */
 let chatIsTyping = false;
 
 function fmtTime() {
@@ -130,7 +122,6 @@ function initChat() {
   const sendBtn = document.getElementById('chat-send');
   if (!input || !sendBtn) return;
 
-  /* Mensagem de boas-vindas */
   addChatMsg('eva', 'Sistema E.V.A. inicializado. Monitoramento ativo em 24 nós.\n\nComo posso auxiliar? Digite "ajuda" para ver os tópicos disponíveis.');
 
   function handleSend() {
@@ -159,7 +150,6 @@ function initChat() {
   lucide.createIcons();
 }
 
-/* ─── Terminal de Logs ────────────────────────────────────────────── */
 const INITIAL_LOGS = [
   { time:'12:47:32', message:'Sistema inicializado. Conectando à rede de micélio...', type:'info' },
   { time:'12:47:45', message:'Rede fúngica detectada. 24 nós ativos no setor A-C.', type:'success' },
